@@ -1,0 +1,43 @@
+Amazon CLoud Formation
+
+service h jo help karta  h AWS ke resources ko setup and manage karne mein
+ek stack bna deta h jahan hum poora define kar dete h ki yeh karna h
+easy way mein process ko automate kar deta h
+jaise humein ek saath multiple kaam karna h jismein humen s3 bucket bnana h, new instance bnana h
+different roles bnanae with diff permissions
+to ye sab manually karne jao to thda time lagega
+isse acha h ek baar hi kar do sab
+
+jab sab resources ko ek saath rakhte h jaise upar bola h use STACK bolte h
+
+Stack ko kaam karne ke liye ek template chahiye hota h
+template ek file h ya to Json hoga ya Yaml hoga
+Yaml Zada preffered hoga
+
+sample template aws se download kar lo
+6 sections hote h
+AWS template format version, Description, Parameters, Mappings, Resources and Output
+Resouces is only Required field kyonki wahi to bnane h
+AWS template format version - genrally date hota h
+Description - kya purpose tha yeh template ka
+Parameters - Agar data user se chahiye
+Mapping - Key value pair chahiye example agar ek ec2 instance bnwana h to industry mein 3 env hote h QA,Staging and dev to iske liye mapping use kar sakte h
+Resources - kya bnana h ex: Roles, Ec2 instance, s3 bucket
+Output - af=gar kuch dikhana h end mein ki yeh bnaya h humne
+
+AGar humein kuch update karna template mein to humein template ko modify karo aur CloudFormation mein ek changeSet raise
+karna padta h, to use update ho jaata h
+
+
+StackSet : Agar humeinek saath stack create karne j alag alg region mein to stack set create karna padta h
+aur is case mein ek stack reference ko stack instance bolte h
+
+gar stack ka status jaana h ki bana h ya fail hua h ya abhi Queue mein h t DescribeStacks ko use karna hota h
+
+
+Coding mein
+
+AWS cloud formation use karne ke liye humein ek cliemt bnana padta h
+uske baad to seedha AWS ke end point use kar na h
+bnanae ke liye
+Template bnana DEV ka kaam h but samjh mein aana chahiye ki kia kya h unhone
